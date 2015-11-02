@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>ICRA</title>
+    <link rel="stylesheet" type="text/css" href="/css/popup.css">
+</head>
+<body>
+
+    <div class="heading">
+        <img src="/img/icon.png" width="48" height="48" alt="Logo (Camera)">
+        <h1>ICRA</h1>
+    </div>
+
+    <div id="status">
+    </div>
+
+    <div class="configuration">
+
+        <h2>Monitoring</h2>
+        <div class="setting">
+            <label for="identity">Identity</label>
+            <input id="identity" type="text">
+        </div>
+        <div class="setting">
+            <label for="paths">Include Path</label>
+            <input id="paths" type="checkbox">
+        </div>
+
+        <h2>Connection</h2>
+        <div class="setting">
+            <label for="hostname">Broker Address</label>
+            <input id="hostname" type="text">
+        </div>
+        <div class="setting">
+            <label for="port">Broker Port</label>
+            <input id="port" type="number">
+        </div>
+        <div class="setting">
+            <label for="ssl">Use SSL</label>
+            <input id="ssl" type="checkbox">
+        </div>
+        <div class="setting">
+            <label for="username">Username</label>
+            <input id="username" type="text">
+        </div>
+        <div class="setting">
+            <label for="password">Password</label>
+            <input id="password" type="password">
+        </div>
+
+    </div>
+
+    <div class="actions">
+        <button id="connect">Save and Connect</button>
+        <button id="disconnect">Disconnect</button>
+    </div>
+
+    <script src="/js/popup.js"></script>
+
+</body>
+</html>

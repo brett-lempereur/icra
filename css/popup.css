@@ -1,0 +1,85 @@
+body {
+    width: 250px;
+    margin: 0px;
+    font-family: sans-serif;
+    font-size: medium;
+}
+
+.heading {
+    height: 50px;
+    margin: 0px;
+    padding: 5px;
+    background-color: #FFE156;
+    border-bottom: 3px solid #CDAF24;
+}
+
+.heading img {
+    float: left;
+    padding-left: 5px;
+    padding-right: 10px;
+}
+
+.heading h1 {
+    font-family: "Lucida Console", "Consolas", "Monaco", monospace;
+    margin: 0px;
+    padding-top: 10px;
+    font-size: x-large;
+    font-weight: bold;
+}
+
+#status {
+    margin: 0px;
+    padding: 10px;
+    background-color: #D4D4D4;
+    border-bottom: 3px solid #A2A2A2;
+    font-size: medium;
+}
+
+.configuration {
+    margin: 0px;
+    padding: 5px;
+    background-color: #FFFFFF;
+}
+
+.configuration h2 {
+    margin: 5px 0px 5px 0px;
+    font-size: medium;
+}
+
+.setting {
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+.setting label {
+    font-size: smaller;
+}
+
+.setting input[type=number],
+.setting input[type=password],
+.setting input[type=text] {
+    width: 95%;
+
+    padding: 5px;
+    border: solid 1px #dcdcdc;
+    transition: box-shadow 0.3s, border 0.3s;
+}
+
+.setting input:focus[type=number],
+.setting input:focus[type=password],
+.setting input:focus[type=text] {
+    border: solid 1px #707070;
+    box-shadow: 0 0 5px 1px #969696;
+}
+
+.actions {
+
+    margin: 0px;
+    padding: 10px;
+
+    background-color: #FFE156;
+    border-top: 3px solid #CDAF24;
+
+    text-align: right;
+
+}
