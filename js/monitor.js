@@ -80,6 +80,7 @@ NavigationMonitor.prototype = {
                 values.port,
                 values.identity
             );
+            monitor.client_.onConnectionLost = monitor.onConnectionLost.bind(this);
             monitor.client_.connect({
                 userName: values.username,
                 password: values.password,
@@ -143,7 +144,7 @@ NavigationMonitor.prototype = {
             uri: uri
         });
         var message = new Paho.MQTT.Message(payload);
-        message.destinationName = "/Browsing/" + this.identity_;
+        message.destinationName = "Browsing/" + this.identity_;
         this.client_.send(message);
 
     },
@@ -154,7 +155,7 @@ NavigationMonitor.prototype = {
     onBrokerConnectionLost_: function(reason) {
         this.client_ = null;
         this.status_ = "Connection lost";
-        this.showErrorBadge_();
+        this.connect();
     },
 
     /**
