@@ -30,9 +30,9 @@ Raise an issue if I'm wrong about the demand.
 
 As ever, help with any of these things would be appreciated:
 
-1. Building a single-page site that will stream my traffic.
-2. Deploying an MQTT server without a 10-client limit.
-3. Fixing outstanding bugs in the extension and making it more robust.
+1. ~~Building a single-page site that will stream my traffic.~~
+2. ~~Deploying an MQTT server without a 10-client limit.~~
+3. ~~Fixing outstanding bugs in the extension and making it more robust.~~
 4. Localising the extension user interface.
 
 Help with the second todo would be great.
