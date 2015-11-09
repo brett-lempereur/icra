@@ -80,7 +80,7 @@ NavigationMonitor.prototype = {
                 values.port,
                 values.identity
             );
-            monitor.client_.onConnectionLost = monitor.onConnectionLost.bind(this);
+            monitor.client_.onConnectionLost = monitor.onBrokerConnectionLost_.bind(this);
             monitor.client_.connect({
                 userName: values.username,
                 password: values.password,
@@ -139,7 +139,7 @@ NavigationMonitor.prototype = {
 
         // Construct and send the update message.
         var payload = JSON.stringify({
-            timestamp: details.timeStamp,
+            timestamp: new Date(details.timeStamp),
             identity: this.identity_,
             uri: uri
         });
