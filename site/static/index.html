@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="icraApp">
+
+<head>
+
+  <title>ICRA</title>
+
+  <!-- External stylesheets -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.5/readable/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link href="stylesheets/custom.css" rel="stylesheet">
+
+  <!-- External scripts -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
+  <script src="https://rawgit.com/gdi2290/angular-websocket/v1.0.9/angular-websocket.js"></script>
+
+  <!-- Scripts -->
+  <script src="js/URI.js"></script>
+  <script src="app/icra.js"></script>
+
+</head>
+
+<body ng-controller="StreamCtrl">
+
+  <div class="jumbotron">
+    <div class="container">
+
+      <h1>ICRA</h1>
+
+      <p>
+        This page streams information about the pages I'm visiting on the internet in real-time. Some of these links may be NSFW.
+      </p>
+      <p>
+        This is an attempt to show the amount of information that will be available about you without and with a warrant if the new
+        <a href="https://wiki.openrightsgroup.org/wiki/Investigatory_Powers_Bill">Investigatory Powers Bill</a> comes into force in its current form.
+      </p>
+      <p>
+        The browser extension that gathers this data is available from its <a href="https://github.com/brett-lempereur/icra.git">GitHub
+        repository</a>. If you'd like to find out more information, or take part yourself, please contact me on
+        <a href="https://twitter.com/brettlempereur">Twitter</a>.
+      </p>
+
+    </div>
+  </div>
+
+  <div class="container">
+
+    <table id="history" class="table table-hover">
+
+      <thead>
+        <tr>
+          <th class="timestamp">Timestamp</th>
+          <th class="device">Device</th>
+          <th class="address">Address</th>
+        </tr>
+      </thead>
+
+      <tbody>
+
+        <tr ng-repeat="item in stream.items">
+          <td class="timestamp">{{ item.timestamp | date: "HH:mm:ss" }}</td>
+          <td class="device">{{ item.identity }}</td>
+          <td class="address">
+            <a ng-href="{{ item.uri.toString() }}">
+              <img ng-src="http://www.google.com/s2/favicons?domain={{ item.uri.hostname() }}">
+              {{ item.uri.toString() }}
+            </a>
+          </td>
+        </tr>
+
+      </tbody>
+
+    </table>
+
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; Brett Lempereur 2015</p>
+    </div>
+  </footer>
+
+</body>
+
+</html>

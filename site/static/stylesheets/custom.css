@@ -1,0 +1,46 @@
+/**
+ *
+ */
+
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+}
+
+.jumbotron {
+    background-image: url("../images/header.jpg");
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    padding: 20px 0px 20px 0px;
+    background-color: #F5F5F5;
+}
+
+th.timestamp {
+    width: 150px;
+}
+
+th.device {
+    width: 150px;
+}
+
+td.device {
+    font-family: monospace;
+}
+
+td.address img {
+    margin-right: 5px;
+}

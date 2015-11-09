@@ -1,0 +1,24 @@
+{
+	"ImportPath": "icra",
+	"GoVersion": "go1.4.2",
+	"Deps": [
+		{
+			"ImportPath": "git.eclipse.org/gitroot/paho/org.eclipse.paho.mqtt.golang.git",
+			"Comment": "v0.9.1-16-g755e3fc",
+			"Rev": "755e3fcf01e9787889db9a3272e33a75795e88ff"
+		},
+		{
+			"ImportPath": "github.com/kelseyhightower/envconfig",
+			"Comment": "v1.0.0-26-g12c18e8",
+			"Rev": "12c18e8343f6eb5fc3a9d5c8dc353e42e6bb40b9"
+		},
+		{
+			"ImportPath": "github.com/pborman/uuid",
+			"Rev": "cccd189d45f7ac3368a0d127efb7f4d08ae0b655"
+		},
+		{
+			"ImportPath": "golang.org/x/net/websocket",
+			"Rev": "b4e17d61b15679caf2335da776c614169a1b4643"
+		}
+	]
+}

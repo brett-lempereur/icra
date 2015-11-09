@@ -1,0 +1,9 @@
+applications:
+- path: .
+  memory: 128M
+  instances: 1
+  domain: eu-gb.mybluemix.net
+  name: icra
+  host: icra
+  disk_quota: 1024M
+  buildpack: go_buildpack
