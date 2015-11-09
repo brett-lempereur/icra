@@ -105,7 +105,6 @@ NavigationMonitor.prototype = {
         }
         this.client_.disconnect();
         this.client_ = null;
-        this.status_ = "Disconnected";
     },
 
     /**
@@ -153,9 +152,11 @@ NavigationMonitor.prototype = {
      * Handler for the 'connectionLost' event of the message broker client.
      */
     onBrokerConnectionLost_: function(reason) {
-        this.client_ = null;
-        this.status_ = "Connection lost";
-        this.connect();
+        monitor.client_ = null;
+        monitor.status_ = "Disconnected";
+        if (reason.errorCode != 0) {
+          monitor.connect_();
+        }
     },
 
     /**
