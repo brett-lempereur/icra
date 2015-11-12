@@ -135,6 +135,9 @@ NavigationMonitor.prototype = {
         if (uri.protocol != "http" && uri.protocol != "https") {
             return;
         }
+        if (uri.protocol == "https") {
+          uri.path = null;
+        }
 
         // Construct and send the update message.
         var payload = JSON.stringify({
